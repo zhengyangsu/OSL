@@ -1,0 +1,8 @@
+shader read_st(float s = 0, float t = 0, output color resultRGB = color(0)){
+	//resultRGB = color(sin(s), sin(t), 0);
+	//resultRGB = color(step(0.1, sin(s)), step(0.1, sin(t)), 0);
+	//resultRGB = color(u, v, 0);
+	float x = mod(s, 1.0);
+	float y = mod(t, 1.0);
+	resultRGB = color(x, y, 0);
+}
